@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/bookmark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@500&family=Roboto:wght@100&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmark</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+            <h1>Bookmarker</h1>
+            <div class="dotted w-100 ">
+                <h2 class="mt-3">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <label class="mt-3 fw-bolder" for="siteName"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</label>
+                <input onkeyup="getValidName()" class="w-100 my-3 form-control" type="text" id="siteName" placeholder="Bookmark Name">
+
+                <label class="fw-bolder" for="siteUrl"><i class="fa-solid fa-link me-2"></i>Site URL</label>
+                <input onkeyup="getValidUrl()" class="w-100 my-3 form-control" type="url" id="siteUrl" placeholder="Website URL">
+
+                <div class="fit-content m-auto ">
+                    <button  onclick="getSite()"  class="my-3 btn btn-outline-dark px-5 text-center">Submit</button>
+                </div>
+            </div>
+        </div>
+        <table class="table text-center mt-4">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
