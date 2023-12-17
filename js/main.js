@@ -60,7 +60,7 @@ function deleteSite(index){
 
 
 function validUrl(){
-    var validUrl = /^(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))$/;
+    var validUrl = /^(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$/;
     return validUrl.test(siteUrl.value)
 }
 
@@ -83,9 +83,6 @@ function getValidName(){
         document.getElementById("siteName").classList.replace("is-invalid" , "is-valid")
     }
 }
-
-
-
 
 function clearInputs(){
     siteName.value = "";
